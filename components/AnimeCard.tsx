@@ -11,8 +11,8 @@ import { motion } from "framer-motion";
 
 export interface AnimeProps {
   id: number;
-  name: string;
-  image: {
+  name?: string;
+  image?: {
     original: string;
   };
   kind?: string;

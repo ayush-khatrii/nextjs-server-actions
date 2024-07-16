@@ -8,9 +8,8 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 interface FetchDataResponse {
-  items: AnimeProps[];
   id: number;
-  nextPage?: number | null;
+  anime: AnimeProps[];
 }
 
 export default function Home() {
@@ -44,7 +43,6 @@ export default function Home() {
         {status === "success" ? (
           <div className="gap-6 p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {animeData.map((item, index) => (
-              // @ts-ignore
               <Animecard key={item.id} anime={item} index={index} />
             ))}
           </div>
